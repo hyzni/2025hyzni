@@ -1,0 +1,118 @@
+#footer{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    .inner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        .group-top{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px 0 50px 0;
+            .title-flex{
+                display: flex;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 20px;
+                .title-wrap{
+                    display: flex;
+                    flex-shrink: 0;
+                    animation: move 10s infinite linear;
+                    .title{
+                        font-size: 130px;
+                        font-weight: 600;
+                        letter-spacing: -0.1em;
+                        flex-shrink: 0;
+                        padding-right: 3vw;
+                        @include tablet{
+                            font-size: 80px;
+                        }
+                        @include mobile{
+                            font-size: 50px;
+                        }
+                    }
+                    @keyframes move {
+                        0%{
+                            transform: translateX(0%);
+                        }
+                        100%{
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+            .contact-area{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 50px;
+                @include tablet{
+                    padding: 0 30px;
+                }
+                .contact-wrap{
+                    .link{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-bottom: 20px;
+                        border-bottom: .5px solid #6c6c6c;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: .5px;
+                            bottom: 0;
+                            left: 0;
+                            background: #f2f2f2;
+                            transition: all .8s cubic-bezier(.19,1,.22,1);
+                            transform: scaleX(0);
+                            transform-origin: left;
+                        }
+                        &:hover{
+                            .arrowRight{
+                                transform: rotate(-45deg);
+                            }
+                            &::after{
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                    .btn-arrow{
+                        width: 16px;
+                        filter: invert(100);
+                    }
+                }
+            }
+        }
+        .group-bottom{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 30px 30px;
+            letter-spacing: -.05em;
+            .link-area{
+                display: flex;
+                gap: 30px;
+                .link{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+            }
+            .copy-area{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    }
+}
+
+

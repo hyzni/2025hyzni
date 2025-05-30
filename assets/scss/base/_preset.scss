@@ -1,0 +1,110 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    z-index: -1;
+}
+
+
+#wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 400px;
+    background: #0D0D0D;
+    overflow: hidden;
+    z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url(../images/noise.png);
+        opacity: .4;
+        pointer-events: none;
+    }
+}
+    
+.inner{
+    margin: 0 auto;
+    padding: 0 40px;
+    // max-width: 2500px;
+}
+
+.scrollbar{
+    position: fixed;
+    left: auto;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 9999;
+    width: 2px;
+    height: 1%;
+    background: linear-gradient(40deg, #f2f2f2, #333333, #0D0D0D);
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        bottom: 0%;
+        width: 200px;
+        height: 1%;
+    }
+    background: linear-gradient(40deg, #f2f2f2, #333333, #0D0D0D);
+}
+
+
+.cursor-dot{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+    circle {
+        fill: rgba($color: #0D0D0D, $alpha: 0.8)
+    }
+    line {
+        stroke: #f2f2f2;
+        transition: stroke 0.2s, stroke-width 0.2s;
+    }     
+    &.hover{
+        width: 40px;
+        height: 40px;
+        svg line{
+            stroke: #0D0D0D; 
+        }
+        svg circle{
+            fill: #f2f2f299;
+        }
+    }
+}
+
+::selection{
+    background: #f2f2f2;
+    color: #0D0D0D;
+}
+
+.sc-side::selection,
+.sc-side *::selection {
+    background: #0D0D0D;
+    color: #f2f2f2;
+}
