@@ -324,27 +324,31 @@ $(document).ready(function(){
             top: (offsetY - imgHeight / 2) + 'px',
             left: (offsetX - imgWidth / 2) + 'px'
         });
+        
     }).on('mouseenter', function () {
         $(this).find('.img-area').css('opacity', 1);
     }).on('mouseleave', function () {
         $(this).find('.img-area').css('opacity', 0);
     });
 
+
+
     $('.btn-link.more, .sc-main img').on('click', function(e) {
         e.preventDefault();
         
         const $currentItem = $(this).closest('.sc-main .swiper-slide');
-        
         const $detailContent = $currentItem.find('.group-detail').html();
-        
+    
+        $('.cursor-dot').appendTo('body');
+    
         $('body').append(`
-        <div class="fixed-detail-popup">
-            <div class="popup-content" data-lenis-prevent>
-            ${$detailContent}
+            <div class="fixed-detail-popup" style="z-index: 9998;">
+                <div class="popup-content">
+                    ${$detailContent}
+                </div>
+                <button class="close-popup"></button>
             </div>
-            <button class="close-popup"></button>
-        </div>
-        <div class="detail-overlay"></div>
+            <div class="detail-overlay" style="z-index: 9997;"></div>
         `);
     
         $('.sc-main .swiper-slide').css('pointer-events', 'none');
@@ -353,7 +357,7 @@ $(document).ready(function(){
             overflow: 'hidden',
             height: '100vh'
         });
-        
+    
         return false;
     });
     
@@ -368,11 +372,12 @@ $(document).ready(function(){
     function closeDetail() {
         $('.fixed-detail-popup, .detail-overlay').remove();
         $('.sc-main .swiper-slide').css('pointer-events', '');
-
+    
         $('body').css({
             overflow: '',
             height: ''
         });
     }
+    
 
 });

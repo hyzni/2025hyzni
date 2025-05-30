@@ -1380,7 +1380,7 @@ html::-webkit-scrollbar {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 9998;
   border-radius: 10px;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.5s ease-out;
@@ -1507,7 +1507,7 @@ html::-webkit-scrollbar {
   position: absolute;
   top: -80px;
   right: 50px;
-  z-index: 9999;
+  z-index: 9998;
 }
 .sc-main .project-inner .swiper-button-next, .sc-main .project-inner .swiper-button-prev {
   display: -webkit-box;

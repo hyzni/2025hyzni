@@ -400,7 +400,7 @@
                     flex-direction: column;
                     position: absolute;
                     top: 0; left: 0;
-                    z-index: 9999;
+                    z-index: 9998;
                     border-radius: 10px;
                     opacity: 0;
                     transition: transform .5s ease-out;
@@ -500,7 +500,7 @@
                 top: -80px;
                 right: 50px;
 
-                z-index: 9999;
+                z-index: 9998;
                 &-next,
                 &-prev{
                     display: flex;
