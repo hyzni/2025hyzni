@@ -374,6 +374,7 @@ html::-webkit-scrollbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 .project .link-wrap .btn-link::before, .popup-content .link-wrap .btn-link::before {
   content: "";
@@ -1368,14 +1369,24 @@ html::-webkit-scrollbar {
   line-height: 1;
 }
 .sc-main .project-inner .swiper-slide .group-link .img-area .title-wrap .class {
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: 400;
   letter-spacing: -0.05em;
 }
+@media (max-width: 1024px) {
+  .sc-main .project-inner .swiper-slide .group-link .img-area .title-wrap .class {
+    font-size: 16px;
+  }
+}
 .sc-main .project-inner .swiper-slide .group-link .img-area .title-wrap .name {
-  font-size: 28px;
+  font-size: 2vw;
   font-weight: 700;
   letter-spacing: -0.04em;
+}
+@media (max-width: 1024px) {
+  .sc-main .project-inner .swiper-slide .group-link .img-area .title-wrap .name {
+    font-size: 20px;
+  }
 }
 .sc-main .project-inner .swiper-slide .hov {
   overflow: visible;
