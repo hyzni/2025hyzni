@@ -84,6 +84,9 @@
             overflow: hidden;
             z-index: 0;
             transition: color 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &::before{
                 content: "";
                 position: absolute;

@@ -365,6 +365,15 @@ html::-webkit-scrollbar {
   z-index: 0;
   -webkit-transition: color 0.4s cubic-bezier(0.76, 0, 0.24, 1);
   transition: color 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .project .link-wrap .btn-link::before, .popup-content .link-wrap .btn-link::before {
   content: "";
@@ -1258,7 +1267,7 @@ html::-webkit-scrollbar {
           flex-direction: column;
   width: 100%;
   height: auto;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 .sc-main .project-inner .headline {
   padding: 0 50px;
