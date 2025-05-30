@@ -428,6 +428,10 @@
                         flex-direction: column;
                         padding: 25px;
                         line-height: 1;
+                        .link-wrap{
+                            display: flex;
+                            gap: 10px;
+                        }
                         .title-wrap{
                             display: flex;
                             flex-direction: column;
@@ -644,6 +648,11 @@
                 .img-wrap{
                     display: flex;
                     justify-content: center;
+                    .img-all{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 .text-wrap{
                     display: flex;

@@ -130,9 +130,6 @@
     }
     .sm-nav{
         display: none;
-        @include tablet{
-            display: block;
-        }
         position: fixed;
         top: 0;left: 0;right: 0;bottom: 0;
         width: 100%;
@@ -140,17 +137,20 @@
         background-color: rgba(0, 0, 0, 0.9);
         transform: translateX(100%);
         transition: all .5s ease-in-out;
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            padding: 100px 45px;
+            gap: 30px;
+        }
         &.active{
             transform: translateX(0);
         }
         .nav-list{
-            position: absolute;
-            top: 100px;
-            right: 45px;
             display: flex;
             flex-direction: column;
             .nav-item{
-                font-size: 55px;
+                font-size: 45px;
                 font-weight: 500;
                 letter-spacing: -0.04em;
                 text-align: right;
@@ -162,14 +162,11 @@
             }
         }
         .link-list{
-            position: absolute;
-            top: 550px;
-            right: 45px;
             display: flex;
             flex-direction: column;
             gap: 5px;
             .link-item{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
                 text-align: right;
                 transition: color .5s ease-in-out;
