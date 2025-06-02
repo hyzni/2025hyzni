@@ -56,11 +56,11 @@ $(document).ready(function(){
         letterSpacing: "-0.03em",
     },'a')
     visualText.to('.sc-visual', {
-        scale: 0.97,
-    }, 'b')
+        scale: 0.93,
+    }, 'a')
     visualText.to('.sc-visual .swiper', {
         borderRadius: 30,
-    }, 'b')
+    }, 'a')
 
     function menuStaggerUp(target){
         gsap.from($(target).find('>*'),{
@@ -204,11 +204,11 @@ $(document).ready(function(){
         }
     });
     about.fromTo('.background', {
-        filter: 'grayscale(100%) blur(0.2px)',
+        filter: 'grayscale(100%)',
         opacity: 0.1,
     }, {
-        filter: 'grayscale(0%) blur(0px)',
-        opacity: 0.3,
+        filter: 'grayscale(0%)',
+        opacity: 0.6,
     });
     
     
@@ -287,8 +287,8 @@ $(document).ready(function(){
         stagger: 0.2,
     }, 'b+1')
     .to('.sc-side .side-wrap', {
-        scale: 0.97,
-    }, 'c')
+        scale: 0.93,
+    }, 'b')
 
     ScrollTrigger.create({
         trigger: ".sc-side",
