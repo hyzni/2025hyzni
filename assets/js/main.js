@@ -48,11 +48,11 @@ $(document).ready(function(){
         }
     });
     visualText.fromTo('.sc-visual .title', {
-        opacity: 0.4,
-        y: 320,
+        opacity: 1,
+        y: 250,
         letterSpacing: "-0.1em",
     }, {
-        opacity: 1,
+        opacity: 0.5,
         letterSpacing: "-0.03em",
     },'a')
     visualText.to('.sc-visual', {
